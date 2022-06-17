@@ -14,10 +14,9 @@ import (
 )
 
 var (
-	LeaderKey   = "leader-election-key"
-	WaitTime    = 1 * time.Second
-	WorkTime    = 5 * time.Second
-	StandByTime = 5 * time.Second
+	LeaderKey = "leader-election-key"
+	WaitTime  = 1 * time.Second
+	WorkTime  = 5 * time.Second
 )
 
 func main() {
@@ -44,7 +43,6 @@ func main() {
 			DoSomeWork(election)
 		} else {
 			fmt.Println("Im a follower, standby...")
-			//time.Sleep(StandByTime)
 		}
 	}
 }
